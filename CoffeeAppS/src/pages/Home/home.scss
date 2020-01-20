@@ -1,0 +1,21 @@
+.card-background-page {
+
+  .card {
+    position: relative;
+    text-align: center;
+    width: 95%;
+    height: 20%;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.2em;
+    width: 100%;
+    font-weight: bold;
+    
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 2px white;
+  }
+
+}

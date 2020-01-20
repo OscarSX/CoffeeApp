@@ -1,0 +1,44 @@
+<ion-header>
+
+        <ion-navbar color="cafe">
+          <ion-title>Editar Sucursal</ion-title>
+        </ion-navbar>
+      
+      </ion-header>
+    
+      <ion-content class="wrapper">
+        <ion-list>
+            <ion-item>
+              <ion-label stacked>Nombre de la sucursal</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label stacked>Telefono</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label stacked>Correo Electronico</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>Contraseña</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>
+                    Ubicacion <br>
+                    <img src="../../assets/imgs/mapa.jpg"/>
+                </ion-label>
+            </ion-item> 
+        </ion-list>
+    
+        <ion-footer class="footer-add">
+            <ion-toolbar color="cafe">
+                <button ion-button full clear color="light" (click)="sucursal()">
+                    Guardar Cambios
+                </button>
+            </ion-toolbar>
+        </ion-footer>
+    </ion-content>

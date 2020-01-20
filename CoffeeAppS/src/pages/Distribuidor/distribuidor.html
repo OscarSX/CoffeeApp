@@ -1,0 +1,52 @@
+<ion-header>
+
+        <ion-navbar color="cafe">
+          <ion-title>Distribuidor</ion-title>
+           <!-- <ion-buttons end>
+                <button ion-button icon-only (click)="canReorder = !canReorder">
+                    <ion-icon *ngIf="canReorder" name="md-close"></ion-icon>
+                    <ion-icon *ngIf="!canReorder" name="md-create"></ion-icon>
+                </button>
+            </ion-buttons> -->
+        </ion-navbar>
+      
+      </ion-header>
+    
+    <ion-content class="card-background-page">
+        <ion-list reorder="{{ canReorder }}" (ionItemReorder)="reorderItems($event)">
+            <ion-item-sliding *ngFor="let item of distribuidor">
+                <ion-item>
+                    <ion-label>
+                        {{ item.nombre }}
+                    </ion-label>
+                    <div item-content>
+                         {{item.invVendido}} Kg. de café vendido(s)
+                   </div>
+                </ion-item>
+                <ion-item-options side="left">
+                        <button ion-button color="secondary" (click)="estadisticasItem(item)">
+                            <ion-icon name="md-trending-up"></ion-icon>
+                        </button>
+                   </ion-item-options> 
+                    <ion-item-options side="right">
+                        <button ion-button color="light" (click)="infoItem(item)">
+                            <ion-icon name="md-information"></ion-icon>    
+                        </button>
+                        <button ion-button color="primary" (click)="editItem(item)">
+                            <ion-icon name="md-create"></ion-icon>
+                        </button>
+                        <button ion-button color="danger" (click)="deleteItem(item)">
+                            <ion-icon name="md-trash"></ion-icon>
+                        </button>
+                    </ion-item-options> 
+            </ion-item-sliding> 
+        </ion-list>
+
+        <ion-footer class="footer-add">
+            <ion-toolbar color="cafe">
+                <button ion-button full clear color="light" (click)="addDistribuidor()">
+                    Agregar Distribuidor
+                </button>
+            </ion-toolbar>
+        </ion-footer>
+    </ion-content>

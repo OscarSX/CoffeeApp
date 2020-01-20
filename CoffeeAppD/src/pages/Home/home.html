@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="cafe">
+        <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button> 
+    
+        <ion-title>
+          CoffeeApp
+        </ion-title>
+    
+        <ion-buttons end>
+          <button ion-button icon-only  (click)="perfil()">
+            <ion-icon name="contact"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-card>
+        <button class="card-btn" (click)="pedidos()">
+            <img src="../../assets/imgs/pedidos.jpg"/>
+            <div class="card-title">Pedidos</div>
+        </button>
+    </ion-card>
+
+    <ion-card>
+        <button class="card-btn" (click)="inventario()">
+            <img src="../../assets/imgs/inventario.jpg"/>
+            <div class="card-title">Inventario</div>
+        </button>
+    </ion-card>
+    
+    <ion-footer>
+        <ion-toolbar color="cafe">
+            <button ion-button full clear color="light" (click)="salir()">
+                Cerrar Sesion
+            </button>
+        </ion-toolbar>
+    </ion-footer>
+      
+</ion-content>

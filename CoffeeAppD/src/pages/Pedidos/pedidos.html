@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar color="cafe">
+        <ion-title>Pedidos</ion-title>
+    </ion-navbar>
+</ion-header>
+    
+<ion-content class="wrapper">
+    <ion-list>
+        <ion-item>
+            <ion-label item-start>Nombre</ion-label>
+            <ion-label item-end>Cantidad</ion-label>
+        </ion-item>
+        <ion-item-sliding>
+            <ion-item>
+                <h3 item-start>Armando Ayala</h3>
+                <h3 item-end>2 Kg.</h3>
+            </ion-item>
+            <ion-item-options side="left">
+                <button ion-button clear color="danger" (click)="detallesUbic()">
+                    <ion-icon name="pin"></ion-icon>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+            <ion-item>
+                <h3 item-start>Miguel A. Sayago</h3>
+                <h3 item-end>1 Kg.</h3>
+            </ion-item>
+            <ion-item-options side="left">
+                <button ion-button clear color="danger" (click)="detallesUbic()">
+                    <ion-icon name="pin"></ion-icon>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+    
+</ion-content>

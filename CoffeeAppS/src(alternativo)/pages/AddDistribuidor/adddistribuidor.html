@@ -1,0 +1,42 @@
+<!--
+<ion-header>
+
+        <ion-navbar color="cafe">
+          <ion-title>Agregar Distribuidor</ion-title>
+        </ion-navbar>
+      
+    </ion-header>
+-->
+<ion-content padding>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+                <h2 class="active"> Registrar </h2>
+                <h2 class="inactive"> Distribuidor </h2>
+                
+                <!-- Login Form -->
+                <form (submit)="signUp()">
+                    <ion-input [(ngModel)]="userModel.nombre" type="text" class="fadeIn first" name="nombre" placeholder="Nombre" required></ion-input>
+                    <ion-input [(ngModel)]="userModel.apellidos" type="text" class="fadeIn second" name="apellidos" placeholder="Apellidos" required></ion-input>
+                    <ion-input [(ngModel)]="userModel.telefono" type="number" class="fadeIn third" name="telefono" placeholder="Telefono" required></ion-input>
+                    <ion-input [(ngModel)]="userModel.email" type="email" id="login" class="fadeIn fourth" name="email" placeholder="Correo" required></ion-input>
+                    <ion-input [(ngModel)]="userModel.password" type="password" id="password" class="fadeIn fifth" name="password" placeholder="Contraseña" required minlength="6"></ion-input>
+                    <input type="submit" class="fadeIn fourth" value="Registrar">
+                </form>
+                
+                <!-- Remind Passowrd -->
+                <div id="formFooter">
+                    Copyright &copy; 2018 <br>
+                    CoffeeApp
+                </div>
+                
+            </div>
+        </div>
+        <ion-footer class="footer-add">
+            <ion-toolbar color="cafe">
+                <button ion-button full clear color="light" (click)="distribuidorr()">
+                    Cancelar
+                </button>
+            </ion-toolbar>
+        </ion-footer>
+    </ion-content>

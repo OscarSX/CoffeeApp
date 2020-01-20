@@ -1,0 +1,56 @@
+    <ion-header>
+
+        <ion-navbar color="cafe">
+          <ion-title>Sucursales</ion-title>
+          <!-- <ion-buttons end>
+              <button ion-button icon-only (click)="canReorder = !canReorder">
+                  <ion-icon *ngIf="canReorder" name="md-close"></ion-icon>
+                  <ion-icon *ngIf="!canReorder" name="md-create"></ion-icon>
+                  md-arrow-round-back flecha atras
+              </button>
+          </ion-buttons> -->
+        </ion-navbar>
+      
+    </ion-header>
+    
+    <ion-content class="card-background-page">
+        <ion-list reorder="{{ canReorder }}" (ionItemReorder)="reorderItems($event)">
+            <ion-item-sliding *ngFor="let item of sucursal">
+                <ion-item>
+                    <ion-label>
+                        {{ item.nombre }}
+                    </ion-label>
+                    <div item-content>
+                        {{ item.inventario }} Kg. de café
+                    </div>
+                </ion-item>
+                <ion-item-options side="left">
+                    <button ion-button color="secondary" (click)="abastecerItem(item)">
+                        <ion-icon name="md-bus"></ion-icon>    
+                    </button>
+                    <button ion-button color="danger">
+                        <ion-icon name="md-pin"></ion-icon>
+                    </button>
+               </ion-item-options> 
+                <ion-item-options side="right">
+                    <button ion-button color="light" (click)="infoItem(item)">
+                        <ion-icon name="md-information"></ion-icon>    
+                    </button>
+                    <button ion-button color="primary" (click)="editItem(item)">
+                        <ion-icon name="md-create"></ion-icon>
+                    </button>
+                    <button ion-button color="danger" (click)="deleteItem(item)">
+                        <ion-icon name="md-trash"></ion-icon>
+                    </button>
+                </ion-item-options> 
+           </ion-item-sliding> 
+       </ion-list>
+
+        <ion-footer class="footer-add">
+            <ion-toolbar color="cafe">
+                <button ion-button full clear color="light" (click)="addSucursal()">
+                    Agregar Sucursal
+                </button>
+            </ion-toolbar>
+        </ion-footer>
+    </ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "CoffeeAppS",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

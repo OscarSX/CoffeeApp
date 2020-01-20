@@ -1,0 +1,44 @@
+<ion-header>
+
+        <ion-navbar color="cafe">
+          <ion-title>Inventario</ion-title>
+          <!-- <ion-buttons end>
+              <button ion-button icon-only (click)="canReorder = !canReorder">
+                  <ion-icon *ngIf="canReorder" name="md-close"></ion-icon>
+                  <ion-icon *ngIf="!canReorder" name="md-create"></ion-icon>
+                  md-arrow-round-back flecha atras
+              </button>
+          </ion-buttons> -->
+        </ion-navbar>
+      
+    </ion-header>
+    
+    <ion-content class="card-background-page">
+        <ion-list>
+            <ion-item *ngFor="let item of inventario">
+                <ion-label>
+                    Producción:
+                </ion-label>
+                <div item-content>
+                    {{ item.prodTotal }} Kg. de café
+                </div>
+            </ion-item>
+            <ion-item *ngFor="let item of inventario">
+                <ion-label>
+                    Inventario en Almacen:
+                </ion-label>
+                <div item-content>
+                    {{ item.invAlmacen }} Kg. de café
+                </div>
+            </ion-item>
+            <ion-item *ngFor="let item of inventario">
+                <ion-label>
+                    Inventario Enviado:
+                </ion-label>
+                <div item-content>
+                    {{ item.invEnviado }} Kg. de café
+                </div>
+            </ion-item> 
+
+       </ion-list>
+    </ion-content>
